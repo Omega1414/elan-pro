@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+
+body {
+    background-color: #f3f4f8;
+    overflow-x: hidden;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after{
+    color: #a8dadc;
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+    background: #855df1 !important;
+   
+}
+
+html::-webkit-scrollbar{
+    display: none;
+
+}
+
+html{
+    scrollbar-width: none;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+}

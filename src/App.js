@@ -1,10 +1,82 @@
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Header } from './components/Header';
+import PrivateRoute from './components/PrivateRoute';
+import CreateListing from './pages/CreateListing';
+import EditListing from './pages/EditListing';
+import ForgotPassword from './pages/ForgotPassword';
+import Home from './pages/Home';
+import Listing from './pages/Listing';
+import Offers from './pages/Offers';
+import Profile from './pages/Profile';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
+import Category from './pages/Category';
+import { Footer } from './components/Footer';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [theme, setTheme] = useState(null);
+
+  useEffect(() => {
+    if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+      setTheme('dark');
+    }
+    else {
+      setTheme('light');
+    }
+  }, [])
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
   return (
-    <div>
-    <h1 className='text-2xl bg-red-400'>hi</h1>
-    </div>
+   <>
+   <Router>
+    <Header handleThemeSwitch={handleThemeSwitch} theme={theme} setTheme={setTheme} />
+    <Routes>
+      <Route path='/' element={<Home  />} />
+      <Route path='/profile' element={<PrivateRoute/>}>
+      <Route path='/profile' element={<Profile/>} />
+      </Route>
+      <Route path='/sign-in' element={<SignIn/>} />
+      <Route path='/sign-up' element={<SignUp/>} />
+      <Route path='/forgot-password' element={<ForgotPassword/>} />
+      <Route path='/offers' element={<Offers/>} />
+      <Route path='/category/:categoryName' element={<Category/>} />
+      <Route path='/create-listing' element={<PrivateRoute/>}>
+      <Route path='/create-listing' element={<CreateListing/>} />
+      </Route>
+      <Route path='/edit-listing' element={<PrivateRoute/>}>
+      <Route path='/edit-listing/:listingId' element={<EditListing/>} />
+      </Route>
+      <Route path='/category/:categoryName/:listingId' element={<Listing/>} />
+    </Routes>
+    <Footer />
+   </Router>
+   <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
+   </>
   );
 }
 
