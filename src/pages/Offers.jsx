@@ -99,7 +99,7 @@ export default function Offers() {
   }
   
   return (
-    <div className=" mx-auto px-3 bg-white dark:bg-black w-full">
+    <div className=" mx-auto px-3 bg-white dark:bg-gray-900 w-full">
       <h1 className="text-3xl text-center pt-6 font-bold mb-6 text-black dark:text-white">Elanlar</h1>
       <div>
      

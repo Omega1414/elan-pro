@@ -78,8 +78,8 @@ export default function Category() {
 
   return (
     <div className="max-w-6xl mx-auto px-3">
-      <h1 className="text-3xl text-center mt-6 font-bold mb-6">
-        {params.categoryName === "rent" ? "Places for rent" : "Places for sale"}
+      <h1 className="text-3xl text-center pt-6 font-bold mb-6">
+        {params.categoryName === "rent" ? "Kirayə üçün evlər" : "Satış üçün evlər"}
       </h1>
       {loading ? (
         <Spinner />
@@ -102,14 +102,14 @@ export default function Category() {
                 onClick={onFetchMoreListings}
                 className="bg-white px-3 py-1.5 text-gray-700 border border-gray-300 mb-6 mt-6 hover:border-slate-600 rounded transition duration-150 ease-in-out"
               >
-                Load more
+                Daha çox
               </button>
             </div>
           )}
         </>
       ) : (
         <p>
-          There are no current{" "}
+          Elanlar bitdi{" "}
           {params.categoryName === "rent"
             ? "places for rent"
             : "places for sale"}

@@ -133,7 +133,7 @@ async function searchBlog(e){
      </form>
       </div>
         <form>
-          <input type="text" id='name' value={name} disabled={!changeDetail} onChange={onChange} className={`mb-6 w-full px-4 py-2 text-xl  text-gray-600 border border-gray-300 rounded transition ease-in-out ${changeDetail ? "text-white bg-gray-500 focus:bg-gray-600 " : "bg-white focus:bg-white dark:bg-black dark:focus:bg-black"}`} />
+          <input type="text" id='name' value={name} disabled={!changeDetail} onChange={onChange} className={`mb-6 w-full px-4 py-2 text-xl  text-gray-600 border border-gray-300 rounded transition ease-in-out ${changeDetail ? "text-white bg-gray-500 focus:bg-gray-600 " : "bg-white focus:bg-white dark:bg-gray-300 dark:focus:bg-black"}`} />
           <input type="email" id='email' value={email} disabled className='mb-6 w-full px-4 py-2 text-xl text-gray-700 bg-white border border-gray-300 rounded transition ease-in-out' />
           <div className='flex justify-between whitespace-nowrap text-sm sm:text-lg mb-6 '>
             <p className='flex items-center text-black dark:text-white '>Adı dəyişmək istəyirsiz?
