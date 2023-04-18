@@ -29,7 +29,12 @@ export default function SignIn() {
         navigate('/')
       }
     } catch (error) {
-      toast.error(error.message)
+      if (error.code === "auth/wrong-password") {
+        toast.error("Email və ya şifrə yalnışdır");
+      }
+      else {
+        toast.error(error.message);
+      }
     }
   }
   return (

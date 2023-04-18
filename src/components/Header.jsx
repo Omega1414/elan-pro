@@ -1,7 +1,6 @@
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import React, { useEffect, useRef, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-import './header.css'
 import logo from '../assets/logo.png'
 
 
@@ -55,16 +54,16 @@ export const Header = ({theme, setTheme, handleThemeSwitch}) => {
             <img src={logo} alt="logo" className='h-5 cursor-pointer' onClick={() => navigate("/")}  />
             </div>
             <div>
-                <ul className='flex space-x-5 xxs:space-x-3  md:space-x-10'>
-                    <li className={`cursor-pointer py-3 text-sm font-semibold border-b-[3px]  ${
+                <ul className='flex  xxs:space-x-2 xs:space-x-6 s:space-x-7  md:space-x-12'>
+                    <li className={`cursor-pointer py-3 xxs:text-xs xs:text-sm  font-semibold border-b-[3px]  ${
                 pathMatchRoute("/") ?  "border-b-red-500 dark:border-b-yellow-400 text-black dark:text-white" : "text-gray-500 dark:text-gray-300 border-b-transparent"}`}  onClick={() => navigate("/")}>Əsas</li>
                     <li
-                     className={`cursor-pointer py-3 text-sm font-semibold border-b-[3px]  ${
+                     className={`cursor-pointer py-3 xxs:text-xs xs:text-sm  font-semibold border-b-[3px]  ${
                         pathMatchRoute("/offers") ?  "border-b-red-500 text-black dark:text-white" : "text-gray-500 dark:text-gray-300 border-b-transparent"
                       }`}
                         onClick={() => navigate("/offers")}>Elanlar</li>
-                    <li className={`cursor-pointer py-3 text-sm font-semibold border-b-[3px] ${(pathMatchRoute("/sign-in") || pathMatchRoute("/profile"))? "border-b-red-500 text-black dark:text-white" : "text-gray-500 dark:text-gray-300 border-b-transparent"}`}  onClick={() => navigate("/profile")}>{pageState}</li>
-                    <li className='cursor-pointer py-3 text-sm font-semibold '>
+                    <li className={`cursor-pointer py-3 xxs:text-xs xs:text-sm font-semibold border-b-[3px] ${(pathMatchRoute("/sign-in") || pathMatchRoute("/profile"))? "border-b-red-500 text-black dark:text-white" : "text-gray-500 dark:text-gray-300 border-b-transparent"}`}  onClick={() => navigate("/profile")}>{pageState}</li>
+                    <li className='cursor-pointer py-3 xxs:text-xs xs:text-sm  font-semibold '>
                      
                     <button onClick={handleThemeSwitch}>
                         {theme === "dark" ? 

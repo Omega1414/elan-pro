@@ -148,7 +148,7 @@ export default function Home({theme, setTheme}) {
           </div>
         )}
         {saleListings && saleListings.length > 0 && (
-          <div className="m-2 mb-6">
+          <div className="m-2 pb-6">
             <h2 className="px-3 text-2xl mt-6 font-semibold text-black dark:text-white">Satış elanları</h2>
             <Link to="/category/sale">
               <p className="px-3 text-sm text-blue-600 hover:text-blue-800 transition duration-150 ease-in-out">
