@@ -151,7 +151,7 @@ export default function Listing({ isVisible }) {
           <div className="flex justify-center space-x-2  md:space-x-4 w-full md:w-full text-center items-center h-full md:h-[50px] bg-blue-900 rounded-md p-1">
           <FaMapMarkerAlt className="mr-2 ml-2 text-2xl font-semibold text-white dark:text-gray-300"/>
           <p className="flex items-center mt-2 mb-2 md:mt-0 md:mb-0  font-semibold text-white dark:text-gray-300 w-[370px] md:w-full break-all text-sm ">
-            {listing.address} aaaaaaaaaa aaaaaaaaaaa aaa
+            {listing.address} 
           </p>
           </div>
 

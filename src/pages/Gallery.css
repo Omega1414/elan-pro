@@ -19,7 +19,7 @@
     }
   }
   .image-gallery-slide img {
-    width: 100%;
+    width: 100% !important;
     height: 350px;
   
     -o-object-fit: contain;
