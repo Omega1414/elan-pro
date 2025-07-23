@@ -106,12 +106,9 @@ export default function Offers() {
      <form onSubmit={(e) => searchBlog(e)} >
      <div className="relative md:mb-6" data-te-input-wrapper-init>
      <div
-          className=" items-center justify-center gap-4 flex flex-row ">
+          className=" items-center justify-center gap-4 flex flex-row mb-4">
        
-            <p className="flex justify-end text-black dark:text-white">
-              <strong>Axtarış</strong>
-            </p>
-      
+        
        <input 
         className="peer block min-h-[auto] w-[300px] rounded border-3 border-gray-500 bg-transparent py-[0.32rem] px-3 leading-[1.6] text-black outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0 dark:bg-gray-700 dark:bg-opacity-90"
         type="text"
