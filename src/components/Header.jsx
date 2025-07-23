@@ -51,7 +51,7 @@ export const Header = ({theme, setTheme, handleThemeSwitch}) => {
     <div className=  {` z-40 transition delay-100 ease-in-out w-full ${isScrolled ? "fixed bg-gray-300 dark:bg-black" : "sticky bg-white dark:bg-gray-900"}`} ref={headerRef} >
         <header className=' flex  justify-between items-center px-3 max-w-6xl mx-auto w-full  z-50 ' >
             <div>
-            <img src={logo} alt="logo" className='h-5 cursor-pointer' onClick={() => navigate("/")}  />
+            <img src={logo} alt="logo" className='h-5 cursor-pointer dark:invert' onClick={() => navigate("/")}  />
             </div>
             <div>
                 <ul className='flex  xxs:space-x-2 xs:space-x-6 s:space-x-7  md:space-x-12'>

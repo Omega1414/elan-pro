@@ -5,9 +5,8 @@
 
 
 body {
-    background-color: #f3f4f8;
-    overflow-x: hidden;
-}
+    @apply bg-[#f3f4f8] dark:bg-gray-900 overflow-x-hidden;
+  }
 .swiper-button-next:after,
 .swiper-button-prev:after{
     color: #a8dadc;
@@ -27,5 +26,10 @@ html{
     scrollbar-width: none;
     overflow-x: hidden;
     scroll-behavior: smooth;
+   
 
 }
+html, body, #root {
+    height: 100%;
+  }
+  
