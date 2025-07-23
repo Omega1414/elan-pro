@@ -50,7 +50,7 @@ export const Header = ({theme, setTheme, handleThemeSwitch}) => {
                     <img src={logo} alt="logo" className='h-6 cursor-pointer dark:invert' onClick={() => navigate("/")} />
                 </div>
                 <div>
-                    <ul className='flex mt-1 xxs:space-x-2 xs:space-x-6 s:space-x-7 md:space-x-12  justify-center items-center'>
+                    <ul className='flex mt-1 space-x-2 xs:space-x-4 sm:space-x-6 md:space-x-12  justify-center items-center'>
                         <li className={`cursor-pointer py-2 xxs:text-xs xs:text-sm font-semibold border-b-[3px] ${
                             pathMatchRoute("/") ? "border-b-red-500 dark:border-b-yellow-400 text-black dark:text-white" : "text-gray-500 dark:text-gray-300 border-b-transparent"
                         }`} onClick={() => navigate("/")}>Əsas</li>
